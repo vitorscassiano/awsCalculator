@@ -22,10 +22,11 @@ module.exports = {
                 test: /.js[x]?$/,
                 exclude: /(node_modules|bower_components)/,
                 use: {
-                    loader: 'babel-loader',
+                    loader: 'babel-loader?cacheDirectory=true',
                     options: {
                         presets: ['babel-preset-env', 'es2015', 'react'],
-                    }
+                        plugins: ['transform-class-properties']
+                    },
                 },
             }
         ]

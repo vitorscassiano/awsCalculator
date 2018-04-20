@@ -1,10 +1,17 @@
 import React from 'react'
 import Route from './routes'
-import Button from 'material-ui/Button'
+import FlatButton from 'material-ui/FlatButton'
+import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import Header from '../src/components/Header';
 
 export default props => (
     <div className='container'>
-    <Button variant='raised' color='primary'> Hello World! </Button>
+        <MuiThemeProvider muiTheme={ getMuiTheme(darkBaseTheme) }>
+            <Header />
+            {/* <AppBar title="AWS Calculator" /> */}
+        </MuiThemeProvider>
         {/* <Route /> */}
     </div>
 )

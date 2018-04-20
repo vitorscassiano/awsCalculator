@@ -1,4 +1,17 @@
 {
-    "presets": [ "react" ],
-    "plugins": [ ]
+    "presets": [
+        "env",
+        "react"
+    ],
+    "plugins": [],
+    "env": {
+        "test": {
+            "presets": [
+                [
+                    "env"
+                ],
+                "react"
+            ]
+        }
+    }
 }
